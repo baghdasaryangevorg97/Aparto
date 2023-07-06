@@ -1,0 +1,47 @@
+$bg: #f3f4f8;
+$bgAdmin: #f8f8fa;
+$bgMain: #e5e5e5;
+$bgSub: #ffffff;
+$text: #0f1013;
+$textSub: #323338;
+$textSmall: #61636b;
+$textBtn: #9da0a9;
+$blue: #4a46f1;
+$blueSub: #2a26ad;
+$green: #2eaa50;
+$greenSub: #e5f8ea;
+$border: #d7daf7;
+$inputBorder: #cfd1da;
+$advancedBack: #e7e9f0; 
+$red: #bb3434;
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexColCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin transition {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}

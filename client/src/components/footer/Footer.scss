@@ -1,0 +1,19 @@
+@import "../../variables";
+
+footer {
+  background: $bg;
+  padding: 48px 0;
+}
+
+.footer {
+  display: flex;
+  align-items: baseline;
+  gap: 131px;
+
+  h1 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 35px;
+    color: $text;
+  }
+}

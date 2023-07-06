@@ -1,0 +1,22 @@
+@import "../../../../../variables";
+
+.cardFlags {
+  @include flexCenter;
+  gap: 4px;
+
+  li {
+    cursor: pointer;
+  }
+
+  &__flag {
+    opacity: 0.5;
+    border-radius: 2px;
+    border: 0.5px solid $textBtn;
+    cursor: pointer;
+  }
+
+  &__flagActive {
+    border-radius: 2px;
+    border: 1px solid $blue;
+  }
+}

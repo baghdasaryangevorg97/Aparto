@@ -1,0 +1,31 @@
+@import "../../../variables";
+
+.sidebar {
+  font-family: "Noto Sans Armenian";
+  font-style: normal;
+  position: sticky;
+  left: 0;
+  top: 0;
+  @include flexCol;
+  gap: 32px;
+  background: $bgSub;
+  padding: 20px;
+  height: 100vh;
+  min-width: 240px;
+  // z-index: 2503;
+  // for yandex map search yMap-2500 search-2501 addPart-2502
+  z-index: 3;
+
+  h1 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 35px;
+    color: $text;
+  }
+
+  &__nav {
+    @include flexCol;
+    justify-content: space-between;
+    height: 100%;
+  }
+}

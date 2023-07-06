@@ -1,0 +1,41 @@
+@import "../../../../variables";
+
+.language {
+  @include flexCol;
+  position: relative;
+
+  &__choose {
+    @include flexCenter;
+    padding: 4px 12px;
+    background: $bgSub;
+    border: 1px solid $border;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button {
+    background: transparent;
+    color: $text;
+    cursor: pointer;
+    @include transition;
+  }
+
+  &__dropdown {
+    display: none;
+  }
+
+  &__dropdown-active {
+    position: absolute;
+    top: 27px;
+    @include flexCol;
+    gap: 5px;
+    padding: 4px 12px;
+    background: $bgSub;
+    border: 1px solid #d7daf7;
+    border-radius: 5px;
+
+    li {
+      cursor: pointer;
+    }
+  }
+}

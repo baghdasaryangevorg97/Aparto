@@ -1,0 +1,32 @@
+@import "../../../../variables";
+
+.footer__nav {
+  &-list {
+    @include flexCol;
+    gap: 26px;
+    padding-bottom: 58px;
+  }
+
+  h4 {
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $text;
+    padding-bottom: 27px;
+  }
+
+  &-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $text;
+  }
+
+  &-sublink {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $textSmall;
+  }
+}

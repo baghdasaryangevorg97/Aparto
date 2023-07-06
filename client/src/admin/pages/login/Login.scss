@@ -1,0 +1,12 @@
+@import "../../../variables";
+
+.login {
+  @include flexColCenter;
+  height: 100vh;
+
+  form {
+    @include flexColCenter;
+    gap: 20px;
+    padding: 30px 0;
+  }
+}

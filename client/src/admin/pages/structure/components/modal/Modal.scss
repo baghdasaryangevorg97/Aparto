@@ -1,0 +1,96 @@
+@import "../../../../../variables";
+
+.modal-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  @include flexCenter;
+  background: rgba(124, 124, 125, 0.7);
+}
+
+.modal-close {
+  display: none;
+}
+
+.modal__card {
+  @include flexColCenter;
+  gap: 12px;
+  width: 424px;
+  padding: 32px 48px;
+  background: $bgSub;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+
+  h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: $textSub;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: $textSub;
+  }
+
+  span {
+    padding: 20px 0 12px 0;
+  }
+
+  &-flags {
+    @include flexCenter;
+    gap: 4px;
+    padding: 20px 0 24px 0;
+
+    &-flag {
+      opacity: 0.5;
+      border-radius: 2px;
+      border: 0.5px solid $textBtn;
+      cursor: pointer;
+    }
+
+    &-flagActive {
+      border-radius: 2px;
+      border: 1px solid $blue;
+    }
+  }
+
+  &-label {
+    @include flexCol;
+    gap: 8px;
+    width: 328px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: $textSmall;
+
+    input {
+      // background: $bg;
+      border: 1px solid $advancedBack;
+      border-radius: 8px;
+      padding: 11px 0 11px 16px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: $text;
+    }
+  }
+
+  &-discard {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: $text;
+    background: $bgSub;
+    border-radius: 8px;
+    padding: 12px 75.5px;
+  }
+}

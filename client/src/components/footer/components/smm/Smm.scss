@@ -1,0 +1,29 @@
+@import "../../../../variables";
+
+.footer__smm {
+  &-list {
+    @include flexCol;
+    gap: 12px;
+  }
+
+  h4 {
+    font-family: "Archivo";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $text;
+    padding-bottom: 25px;
+  }
+
+  a {
+    font-family: "Archivo";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $text;
+    @include flex;
+    gap: 14px;
+  }
+}

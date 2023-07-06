@@ -1,0 +1,96 @@
+@import "../../../variables";
+
+.structure {
+  padding: 0 46px 181px 20px;
+
+  &__sticky {
+    position: sticky;
+    top: 0;
+    background: $bgAdmin;
+    padding-top: 24px;
+    padding-bottom: 37px;
+
+    h3 {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    gap: 24px;
+    // justify-content: space-between;
+  }
+
+  &__center {
+    @include flexCol;
+    gap: 24px;
+
+    &-card {
+      h4 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: $textSub;
+      }
+
+      ul {
+        width: 555px; //
+        // border: 1px solid $advancedBack;
+
+        margin-top: 16px;
+        margin-bottom: 8px;
+        // background: $bgSub;
+
+        li {
+          border: 1px solid $advancedBack;
+          padding: 14px 16px;
+          background: $bgSub;
+
+          &:first-child {
+            background: $bg;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+          }
+          &:last-child {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+          }
+
+          span {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 16px;
+            color: $text;
+            width: 100% !important;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: $text;
+            text-transform: uppercase;
+          }
+
+          button {
+            background: transparent;
+            @include transition;
+
+            &:hover {
+              scale: (0.9);
+            }
+          }
+        }
+      }
+
+      &-btn {
+        @include flexCenter;
+      }
+    }
+  }
+
+  &__right {
+    @include flexCol;
+    gap: 24px;
+  }
+}

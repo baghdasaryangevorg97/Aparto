@@ -1,0 +1,41 @@
+@import "../../../../../variables";
+
+.keywords {
+  @include flexCol;
+
+  p {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: $textSmall;
+    padding: 16px 0 4px 0;
+  }
+
+  &__addeds {
+    width: 631px;
+    min-height: 120px;
+    padding: 12px 16px;
+    background: $bgSub;
+    border: 1px solid $advancedBack;
+    border-radius: 8px;
+
+    &-list {
+      @include flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    &-link {
+      @include flex;
+      gap: 10px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $text;
+      background: $advancedBack;
+      border-radius: 36px;
+      padding: 12px 16px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../variables";
+
+.configs {
+  @include flexCol;
+  // gap: 24px;
+  // padding: 24px 20px 41px;
+  padding: 0 20px 41px;
+
+  &__nav {
+    @include flexCol;
+    gap: 20px;
+    //
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    padding: 24px 0;
+    background: $bgAdmin;
+
+    &-list {
+      @include flex;
+      gap: 33px;
+    }
+
+    &-link {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: $blue;
+      cursor: pointer;
+      @include transition;
+      padding: 11px 28px;
+      border-bottom: 2px solid transparent;
+    }
+
+    &-linkActive {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: $blue;
+      cursor: pointer;
+      @include transition;
+      padding: 11px 28px;
+      background: #f3f3fe;
+      border-bottom: 2px solid #4a46f1;
+    }
+  }
+}

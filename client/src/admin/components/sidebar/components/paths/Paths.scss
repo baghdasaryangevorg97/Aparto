@@ -1,0 +1,25 @@
+@import "../../../../../variables";
+
+.sidebar__list {
+  @include flexCol;
+  gap: 36px;
+
+  &-navlink {
+    @include flex;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: $textSub;
+    background: transparent;
+    border-radius: 8px;
+    padding: 10px 0px 10px 24px;
+  }
+
+  .active {
+    @include transition;
+    color: $blue;
+    background: rgba(215, 218, 247, 0.5);
+    // fill: $blue;
+  }
+}

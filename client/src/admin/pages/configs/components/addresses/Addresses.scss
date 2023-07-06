@@ -1,0 +1,12 @@
+@import "../../../../../variables";
+
+.addresses {
+  &__top {
+    @include flex;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    margin-top: 24px;
+  }
+}

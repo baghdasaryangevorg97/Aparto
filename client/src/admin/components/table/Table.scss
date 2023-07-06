@@ -1,0 +1,35 @@
+@import "../../../variables";
+
+// table top part
+.eYOasi,
+.ivAqze {
+  background-color: $bg !important;
+  border: 1px solid $advancedBack !important;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+}
+
+// table rows
+.JRhAO,
+.kRxGNK {
+  color: $text !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+}
+
+// table columns
+.columFontSize {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $text;
+}
+
+// remove btn to left
+.columnDelete {
+  width: 100%;
+  background: transparent;
+  @include flex;
+  justify-content: flex-end;
+}

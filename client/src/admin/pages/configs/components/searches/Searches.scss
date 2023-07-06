@@ -1,0 +1,96 @@
+@import "../../../../../variables";
+
+.searches {
+  &__top {
+    @include flex;
+    justify-content: space-between;
+
+    &-right {
+      @include flex;
+
+      select {
+        margin-right: 13px;
+        width: 230px;
+        background: $bgSub;
+        border: 1px solid $inputBorder;
+        border-radius: 8px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+        padding: 8px 12px;
+        // indicatior
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1em;
+      }
+
+      &-picker {
+        position: relative;
+        width: 173px;
+        // margin-left: 13px;
+        background: $bgSub;
+        border: 1.5px solid $inputBorder;
+        border-radius: 8px;
+        padding: 11px 0 11px 16px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $textSub;
+      }
+
+      span {
+        position: absolute;
+        right: 32px;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 24px;
+  }
+}
+
+.react-datepicker-wrapper {
+  width: 173px !important;
+}
+
+.react-datepicker__input-container {
+  width: 173px !important;
+}
+
+.react-datepicker__navigation-icon {
+  top: 4px !important;
+}
+
+.react-datepicker__navigation--previous {
+  left: 44px !important;
+}
+
+.react-datepicker__navigation-icon--previous::before {
+  right: -12px !important;
+}
+
+.react-datepicker__navigation--next {
+  right: 24px !important;
+}
+
+.react-datepicker__navigation-icon--next::before {
+  left: 0px !important;
+}
+
+.react-datepicker__day--today {
+  background: $blue !important;
+  border-radius: 8px !important;
+  color: $bgSub !important;
+  font-size: 16px !important;
+}
+
+.react-datepicker__day--selected {
+  background: $green !important;
+  border-radius: 8px !important;
+  color: $bgSub !important;
+  font-size: 16px !important;
+}

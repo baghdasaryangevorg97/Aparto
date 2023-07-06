@@ -1,0 +1,37 @@
+@import "../../../../../variables";
+
+.propertiySearchbox {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: $bgAdmin;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  &__top {
+    @include flex;
+    justify-content: space-between;
+    padding: 24px 0 16px 0;
+  }
+
+  &__form {
+    @include flexCol;
+    gap: 8px;
+    background: $advancedBack;
+    border-radius: 10px;
+    padding: 16px;
+
+    gap: 8px;
+    @include transition;
+
+    &-open {
+      @include flex;
+      gap: 8px;
+    }
+
+    &-close {
+      display: none;
+      @include transition;
+    }
+  }
+}

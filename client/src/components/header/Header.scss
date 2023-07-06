@@ -1,0 +1,40 @@
+@import "../../variables";
+
+.header {
+  background: $bg;
+  padding: 27px 0;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  &__nav {
+    @include flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    @include flex;
+    gap: 40px;
+
+    h1 {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 35px;
+      color: $text;
+    }
+  }
+
+  &__right {
+    @include flex;
+    gap: 12px;
+  }
+
+  &__contact {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: $blue;
+    margin-right: 24px;
+  }
+}

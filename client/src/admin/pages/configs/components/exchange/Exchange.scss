@@ -1,0 +1,19 @@
+@import "../../../../../variables";
+
+.exchange {
+  @include flexCol;
+  gap: 8px;
+  margin-top: 20px;
+  
+  h6 {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $textSub;
+  }
+
+  &__form {
+    @include flex;
+    gap: 20px;
+  }
+}

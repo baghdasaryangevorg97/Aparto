@@ -1,0 +1,11 @@
+@import "../../variables";
+
+.notFound {
+  width: 100vw;
+  height: 80vh;
+  @include flex;
+  background: $bg;
+  border: 1px solid $border;
+  border-right: none;
+  border-left: none;
+}

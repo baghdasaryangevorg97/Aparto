@@ -1,0 +1,51 @@
+@import "../../../../../variables";
+
+.addOwner {
+  &__addBtn {
+    @include flex;
+    gap: 8px;
+    color: $blue;
+    background: transparent;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration-line: underline;
+  }
+
+  &__addBtnHidden {
+    display: none;
+  }
+
+  &__labelsActive {
+    @include flex;
+    // justify-content: end;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    &-remove {
+      @include flex;
+      gap: 7px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: $red;
+      background: transparent;
+      text-decoration-line: underline;
+    }
+  }
+
+  &__labels {
+    display: none;
+  }
+}
+
+.editOwner{
+  @include flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  &__card{
+    @include flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

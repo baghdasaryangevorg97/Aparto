@@ -1,0 +1,137 @@
+@import "../../../variables";
+
+.dash__label {
+  @include flexCol;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $textSub;
+}
+
+.dash__input {
+  background: $bg;
+  color: $text;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1.5px solid $inputBorder;
+  border-radius: 8px;
+  padding: 9px 0 9px 16px;
+  width: 350px;
+
+  &::placeholder,
+  :-ms-input-placeholde,
+  ::-ms-input-placeholder {
+    color: $inputBorder;
+  }
+}
+
+// Select Role
+.dash__input-selectrole {
+  background: $bg;
+  color: $text;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1.5px solid $inputBorder;
+  border-radius: 8px;
+  padding: 9px 0 9px 16px;
+  width: 350px;
+  // indicatior
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+// Dropdown
+.dash__input-dropdown {
+  background: $bgSub;
+  // color: $textBtn;
+  border: 1px solid $inputBorder;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 12px 16px;
+  // indicatior
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  cursor: pointer;
+
+  &-options {
+    color: $text;
+  }
+}
+
+//
+.disabled__label {
+  @include flexCol;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $textBtn;
+}
+
+.disabled__input {
+  background: $bg;
+  color: $inputBorder;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1.5px solid $inputBorder;
+  border-radius: 8px;
+  padding: 9px 0 9px 16px;
+  width: 350px;
+
+  &::placeholder,
+  :-ms-input-placeholde,
+  ::-ms-input-placeholder {
+    color: $inputBorder;
+  }
+}
+
+// Search with icon
+.dash__search {
+  @include flex;
+  position: relative;
+
+  span {
+    position: absolute;
+    left: 15px;
+  }
+
+  input {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 12px 12px 40px;
+    background: $bgSub;
+    border: 1px solid $inputBorder;
+    border-radius: 6px;
+    width: 503px;
+
+    &::placeholder,
+    :-ms-input-placeholde,
+    ::-ms-input-placeholder {
+      color: $textBtn;
+    }
+  }
+}
+
+// Upload Avatar
+.imgUpload {
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+}

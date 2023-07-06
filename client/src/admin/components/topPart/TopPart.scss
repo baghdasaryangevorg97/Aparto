@@ -1,0 +1,6 @@
+@import "../../../variables";
+
+.topPart {
+  @include flex;
+  justify-content: space-between;
+}

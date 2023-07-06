@@ -1,0 +1,39 @@
+@import "../../../../../variables";
+
+.user {
+  @include flex;
+  justify-content: space-between;
+  background: $bg;
+  border-radius: 8px;
+  padding: 10px 16px 10px 10px;
+
+  &__info {
+    @include flex;
+    gap: 12px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+    }
+
+    &-text {
+      @include flexCol;
+      align-items: flex-start;
+
+      p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $text;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $textSmall;
+      }
+    }
+  }
+}

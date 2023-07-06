@@ -1,0 +1,80 @@
+@import "../../../../../variables";
+
+.imgsUpload {
+  &__upload {
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+  }
+
+  &__card {
+    // @include flex;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    &-main {
+      position: relative;
+      z-index: 1;
+      cursor: move;
+    }
+
+    &-img {
+      width: 200px;
+      height: 152px;
+      // object-fit: contain;
+      border-radius: 12px;
+      z-index: 0;
+      position: relative;
+    }
+
+    p {
+      position: absolute;
+      top: 0;
+      @include flexCenter;
+      width: 200px;
+      height: 152px;
+      border-radius: 12px;
+      background: $text;
+      opacity: 0.8;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $bg;
+    }
+
+    &-btns {
+      @include flex;
+      gap: 6px;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 2;
+
+      &-delete {
+        @include flex;
+        justify-content: center;
+        background: rgba(50, 51, 56, 0.9);
+        border-radius: 4px;
+        padding: 5px 6px;
+        cursor: pointer;
+      }
+
+      &-hideShow {
+        @include flex;
+        justify-content: center;
+        gap: 3px;
+        background: rgba(50, 51, 56, 0.9);
+        border-radius: 4px;
+        padding: 4px 8px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $bg;
+        cursor: pointer;
+      }
+    }
+  }
+}

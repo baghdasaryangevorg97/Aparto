@@ -1,0 +1,32 @@
+@import "../../../../../variables";
+
+.modal {
+  //dropdown
+  &__label {
+    @include flexCol;
+    gap: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: $textSmall;
+    margin-top: 20px;
+
+    &-select {
+      width: 328px;
+      // background: $bg;
+      border: 1px solid $advancedBack;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $text;
+      border-radius: 8px;
+      padding: 12px 0 12px 16px;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1em;
+    }
+  }
+}

@@ -1,0 +1,784 @@
+@import "../../../../variables";
+
+.addproperties {
+  &__main {
+    @include flex;
+    gap: 21px;
+    // justify-content: space-between;
+    align-items: flex-start;
+    padding: 28px 20px;
+  }
+
+  &__center,
+  &__right {
+    @include flexCol;
+    gap: 16px;
+  }
+
+  &__card {
+    @include flexCol;
+    // display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+    background: $bgSub;
+    border: 1px solid $advancedBack;
+    border-radius: 8px;
+    padding: 25px;
+
+    h2 {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: $textSub;
+      padding-bottom: 4px;
+    }
+
+    &-block {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    &-row {
+      @include flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    // for prices
+    &-rowGap {
+      @include flex;
+      justify-content: space-between;
+      // align-items: flex-end;
+      gap: 12px;
+    }
+
+    // Dropdowns
+    &-singleselect {
+      @include flexCol;
+      gap: 4px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 13px;
+      text-transform: uppercase;
+      color: $textSmall;
+
+      &-dropdown {
+        cursor: pointer;
+        background: $bg;
+        border: 1px solid $advancedBack;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $textSmall;
+        border-radius: 8px;
+        padding: 12px 0 12px 16px;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1em;
+      }
+    }
+  }
+}
+
+// Single Property
+.singleProperty {
+  padding: 40px 20px;
+  @include flexCol;
+  gap: 40px;
+
+  @media screen and (min-width: 1520px) {
+    padding: 40px 50px;
+  }
+
+  @media screen and (min-width: 1600px) {
+    padding: 40px 70px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 36px;
+    color: $text;
+    // width: 658px;
+  }
+
+  &__subtitle {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    color: $text;
+  }
+
+  &__imgs {
+    display: flex;
+    background: $bgAdmin;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    height: 442px;
+    @include transition;
+    // position: sticky;
+    // top: 0;
+    z-index: 2;
+    position: relative;
+
+    &-left {
+      height: 100%;
+
+      img {
+        width: 555px;
+        height: 442px;
+        object-fit: cover;
+        border-radius: 12px;
+
+        // //
+        // @media screen and (max-width: 1438px) {
+        //   width: 444px;
+        // }
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      img {
+        width: 289px;
+        height: 216px;
+        object-fit: cover;
+        border-radius: 12px;
+
+        // //
+        // @media screen and (max-width: 1438px) {
+        //   width: 49%;
+        // }
+
+        //
+        @media screen and (min-width: 1440px) {
+          width: 48%;
+        }
+      }
+
+      button {
+        @include flex;
+        gap: 9px;
+        padding: 9px 14px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        color: $text;
+        background: $bgSub;
+        border: 1.5px solid $text;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        z-index: 3;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: $bgSub;
+      padding: 4px 8px;
+    }
+
+    &-url {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      @include flex;
+      gap: 10px;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 600;
+      color: $blue;
+      padding: 8px 20px;
+      background: $bgSub;
+      border-radius: 31px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    // gap: 48px;
+    z-index: 1;
+
+    &-left {
+      width: 768px;
+
+      &-title {
+        display: flex;
+        align-items: baseline;
+
+        &-left {
+          @include flexCol;
+          gap: 16px;
+          width: 100%;
+
+          p {
+            @include flex;
+            gap: 6px;
+
+            span {
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 20px;
+              color: $blue;
+              text-decoration: underline;
+              padding-left: 6px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &-right {
+          @include flexCol;
+          gap: 15px;
+
+          span {
+            @include flex;
+            gap: 4px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            color: $blueSub;
+          }
+
+          p {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            color: $textSub;
+          }
+        }
+      }
+
+      &-options {
+        @include flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 36px 0 46px 0;
+
+        div {
+          @include flex;
+          gap: 8px;
+          background: $bgSub;
+          width: fit-content;
+          padding: 10px 18px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: $textSub;
+          border: 1.5px solid $bg;
+          border-radius: 8px;
+
+          p {
+            font-weight: 700;
+          }
+        }
+      }
+
+      &-desc {
+        &-info {
+          @include flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          padding: 20px 0 24px 0;
+
+          p {
+            width: fit-content;
+            // background: #f3f4f8;
+            background: $bgSub;
+            padding: 10px 18px;
+            border-radius: 8px;
+            color: $textSub;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+
+            span {
+              font-weight: 700;
+            }
+          }
+        }
+
+        &-text {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: $text;
+        }
+      }
+
+      &-facility {
+        padding: 48px 0 52px 0;
+
+        &-card {
+          @include flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          padding-top: 24px;
+
+          p {
+            @include flex;
+            gap: 10px;
+            width: 321px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: $textSub;
+          }
+        }
+      }
+
+      &-otherFacility {
+        &-card {
+          @include flex;
+          flex-wrap: wrap;
+          gap: 32px;
+          padding-top: 24px;
+
+          p {
+            @include flex;
+            gap: 9px;
+            width: 228px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: $textSub;
+          }
+        }
+      }
+
+      &-video {
+        padding-top: 48px;
+
+        &-card {
+          margin-top: 20px;
+          width: 100%;
+          height: 100%;
+
+          iframe {
+            width: 100%;
+            height: 432px;
+          }
+        }
+      }
+
+      &-location {
+        padding-top: 52px;
+
+        p {
+          @include flex;
+          gap: 6px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: $text;
+        }
+
+        &-map {
+          margin-top: 12px;
+        }
+      }
+    }
+
+    &-right {
+      &-price {
+        padding: 16px 20px;
+        background: $bgSub;
+        border: 1px solid $advancedBack;
+        border-radius: 12px;
+        margin-bottom: 16px;
+
+        h4 {
+          @include flex;
+          gap: 18px;
+          padding: 9px 12px;
+          margin-bottom: 4px;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 28px;
+          color: $text;
+          background: $bg;
+          border-radius: 10px;
+
+          span {
+            font-family: "Archivo";
+            font-style: normal;
+            font-weight: 800;
+          }
+        }
+
+        p {
+          display: flex;
+          gap: 6px;
+          margin-top: 12px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: $textSmall;
+
+          span {
+            @include flexCol;
+            gap: 6px;
+            font-weight: 600;
+            color: $text;
+          }
+        }
+
+        &-history {
+          width: 100%;
+          padding: 8px 12px;
+          background: $bg;
+          color: $textSmall;
+          border: 1px solid $advancedBack;
+          border-radius: 6px;
+          margin: 16px 0 12px 0;
+          cursor: pointer;
+
+          p {
+            @include flex;
+            justify-content: space-between;
+            margin: 0;
+          }
+
+          &-listActive {
+            @include flexCol;
+            @include transition;
+
+            &-view {
+              @include flex;
+              justify-content: space-between;
+              padding: 16px 0;
+
+              &:first-child {
+                margin-top: 16px;
+                border-top: 1px solid $advancedBack;
+              }
+
+              &:not(:last-child) {
+                border-bottom: 1px solid $advancedBack;
+              }
+            }
+          }
+
+          &-list {
+            display: none;
+            @include transition;
+          }
+        }
+
+        hr {
+          border: 0.5px solid $advancedBack;
+          width: 100%;
+
+          &:not(:first-child) {
+            margin-top: 12px;
+          }
+        }
+      }
+
+      &-contact {
+        padding: 20px;
+        width: 384px;
+        background: $bgSub;
+        border: 1px solid $advancedBack;
+        border-radius: 12px;
+        margin-bottom: 16px;
+
+        h5 {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: $text;
+          margin-bottom: 28px;
+        }
+
+        &-social {
+          @include flexCol;
+          gap: 29px;
+
+          &-card {
+            @include flexCol;
+            gap: 13px;
+
+            span {
+              @include flex;
+              gap: 13px;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 20px;
+              color: $text;
+            }
+
+            p {
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 20px;
+              color: $text;
+            }
+
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+
+          &-bottom {
+            display: flex;
+            gap: 69px;
+          }
+        }
+
+        &-info {
+          @include flex;
+          gap: 8px;
+          margin-top: 24px;
+
+          img {
+            border-radius: 100%;
+            width: 60px;
+            height: 60px;
+          }
+
+          &-name {
+            @include flexCol;
+            gap: 8px;
+
+            p {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 20px;
+              color: $text;
+            }
+
+            span {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 16px;
+              color: $textSmall;
+            }
+          }
+        }
+      }
+
+      // &-juridical {
+      //   width: 384px;
+      //   height: 366px;
+      //   background: $bgSub;
+      //   border: 1px solid $advancedBack;
+      //   border-radius: 12px;
+      //   margin-bottom: 16px;
+      // }
+
+      &-info {
+        padding: 24px;
+        width: 384px;
+        background: $bgSub;
+        border: 1px solid $advancedBack;
+        border-radius: 12px;
+        margin-bottom: 16px;
+
+        h5 {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+          color: $textSub;
+        }
+
+        textarea {
+          width: 100%;
+          height: 80px;
+          padding: 12px 16px;
+          background: $bg;
+          border: 1px solid $advancedBack;
+          border-radius: 8px;
+          resize: none;
+          word-wrap: break-word;
+          word-break: break-all;
+          font-family: "Noto Sans Armenian";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: $textSmall;
+          margin: 16px 0;
+        }
+
+        &-uploads {
+          @include flexCol;
+          gap: 10px;
+
+          &-file {
+            @include flex;
+            gap: 10px;
+
+            a {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 20px;
+              text-decoration-line: underline;
+              color: $textSub;
+            }
+          }
+        }
+      }
+
+      &-specialists {
+        padding: 24px;
+        background: $bgSub;
+        border: 1px solid $advancedBack;
+        border-radius: 12px;
+        margin-bottom: 16px;
+
+        h5 {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+          color: $textSub;
+        }
+
+        &-fields {
+          @include flexCol;
+          gap: 16px;
+          margin-top: 16px;
+
+          label {
+            @include flexCol;
+            gap: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 16px;
+            color: $textSmall;
+
+            input {
+              width: 100%;
+              padding: 12px 16px;
+              font-weight: 400;
+              background: $bg;
+              border: 1px solid $advancedBack;
+              border-radius: 8px;
+            }
+          }
+        }
+      }
+
+      &-keywords {
+        width: 384px;
+        padding: 24px;
+        background: $bgSub;
+        border: 1px solid $advancedBack;
+        border-radius: 12px;
+        margin-bottom: 16px;
+
+        h5 {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+          color: $textSub;
+        }
+
+        &-list {
+          @include flex;
+          gap: 10px;
+          flex-wrap: wrap;
+          margin-top: 16px;
+
+          p {
+            font-size: 14px;
+            line-height: 16px;
+            color: $text;
+            background: $advancedBack;
+            border-radius: 36px;
+            padding: 12px 16px;
+          }
+        }
+      }
+
+      &-dates {
+        @include flexCol;
+        gap: 19px;
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: $textSmall;
+        }
+      }
+    }
+  }
+}
+
+.react-fullscreen-carousel {
+  width: 100%;
+  // background: none !important;
+
+  .slide {
+    width: 100vw;
+    @include flexCenter;
+    flex-shrink: 0;
+    background: none;
+  }
+}
+
+.forwardButton,
+.backButton {
+  button {
+    padding: 9px !important;
+    border-radius: 8px !important;
+    background: $blue !important;
+    color: $bgSub !important;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    border: 1px solid transparent;
+    @include transition;
+
+    &:hover {
+      border: 1px solid $bgSub;
+    }
+  }
+}
+.closeButton {
+  button {
+    padding: 11px !important;
+    border-radius: 8px !important;
+    background: $bgSub !important;
+    color: $text !important;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.7px;
+    border: 1px solid transparent;
+    @include transition;
+
+    &:hover {
+      border: 1px solid $text;
+    }
+  }
+}
+
+//
+// .swiper {
+//   width: 1160px;
+//   height: 100%;
+// }
+// .swiper-slide {
+//   @include flexCenter;
+// }
+//

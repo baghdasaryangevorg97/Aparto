@@ -1,0 +1,43 @@
+@import "../../../../variables";
+
+.size {
+  @include flexCol;
+  position: relative;
+
+  &__choose {
+    @include flexCenter;
+    padding: 4px 12px;
+    background: $bgSub;
+    border: 1px solid $border;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__unit {
+    font-family: "Archivo";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: $text;
+    cursor: pointer;
+
+    sup {
+      font-size: 8px;
+    }
+  }
+
+  &__dropdown {
+    display: none;
+  }
+
+  &__dropdown-active {
+    position: absolute;
+    top: 27px;
+    @include flexCol;
+    gap: 5px;
+    padding: 4px 12px;
+    background: $bgSub;
+    border: 1px solid #d7daf7;
+    border-radius: 5px;
+  }
+}

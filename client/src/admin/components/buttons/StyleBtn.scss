@@ -1,0 +1,77 @@
+@import "../../../variables";
+
+.btn__onclick {
+  gap: 7px;
+  padding: 12px 69px;
+  background: $blue;
+  border-radius: 8px;
+  
+  span {
+    font-family: "Noto Sans Armenian";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: $bgSub;
+  }
+}
+
+.btn__add {
+  @include flexCenter;
+  gap: 7px;
+  padding: 12px 24px;
+  background: $blue;
+  border-radius: 8px;
+
+  span {
+    font-family: "Noto Sans Armenian";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: $bgSub;
+  }
+}
+
+.btn__add-this {
+  font-family: "Noto Sans Armenian";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  color: $bgSub;
+  padding: 12px 24px;
+  background: $blue;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.btn__discard {
+  font-family: "Noto Sans Armenian";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  background: $bgSub;
+  color: #9da0a9;
+  border: 1.5px solid #9da0a9;
+  border-radius: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.btn__edit {
+  font-family: "Noto Sans Armenian";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  // background: $bgSub;
+  // color: #9da0a9;
+  // border: 1.5px solid #9da0a9;
+  border-radius: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  width: fit-content;
+}

@@ -1,0 +1,156 @@
+@import "../../../../../variables";
+
+// inputSymbol
+.inputSymbol {
+  position: relative;
+
+  input {
+    padding: 12px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    background: $bgSub;
+    border: 1px solid $inputBorder;
+    border-radius: 6px;
+
+    &::placeholder,
+    :-ms-input-placeholde,
+    ::-ms-input-placeholder {
+      color: $textBtn;
+    }
+  }
+
+  p {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text;
+  }
+}
+
+.advancedBtn {
+  @include flex;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 18px;
+  color: $textSub;
+  background: $bgSub;
+  border: 1.5px solid $textSub;
+  border-radius: 8px;
+  padding: 11px 18px;
+}
+
+// cardText for all inputs
+.cardText {
+  @include flexCol;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 13px;
+  text-transform: uppercase;
+  color: $textSmall;
+  // for price symbol
+  position: relative;
+
+  // Textareas
+  input,
+  textarea {
+    background: $bg;
+    border: 1px solid $advancedBack;
+    border-radius: 8px;
+    resize: none;
+    font-family: "Noto Sans Armenian";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  // full width and with height input
+  &-larg {
+    padding: 12px 16px;
+    height: 90px;
+  }
+
+  // full width only
+  &-full {
+    width: 629px;
+    padding: 12px 16px;
+  }
+
+  // for prices
+  &-price {
+    width: 202px;
+    padding: 12px 16px;
+  }
+
+  &-hug {
+    width: 306px;
+    padding: 12px 16px;
+  }
+
+  &-numSelector {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: $textSmall;
+    padding: 6px 9px;
+    border: 1px solid $advancedBack;
+    border-radius: 4px;
+  }
+
+  // for price and other icons in input
+  & span {
+    position: absolute;
+    right: 16px;
+    top: 30px;
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $textSub;
+  }
+}
+
+// // mid input
+// &-mid {
+//   width: 283px;
+//   padding: 12px 16px;
+// }
+// // middPlus input
+// &-midPlus {
+//   width: 412px;
+//   padding: 12px 16px;
+// }
+// // small input
+// &-small {
+//   width: 100px;
+//   padding: 12px 16px;
+// }
+
+// file upload
+.fileUpload {
+  @include flex;
+  justify-content: space-between;
+  width: 412px;
+
+  &__label {
+    @include flex;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: $blue;
+
+    input {
+      display: none;
+    }
+  }
+}
